@@ -8,13 +8,15 @@ socketio = SocketIO(app,cors_allowed_origins="*")
 
 users = {}
 
+
+
 @app.route('/')
 def index():
     return render_template('index.html')
 
 @app.route('/orginate')
 def orginate():
-    socketio.emit('server orginated', 'Something happened on the server!')
+    socketio.emit('server orginateddasdassad', 'Something happened on the server!')
     return '<h1>Sent!</h1>'
 
 @socketio.on('message from user', namespace='/messages')
