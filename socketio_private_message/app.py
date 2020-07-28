@@ -4,7 +4,7 @@ from flask_socketio import SocketIO, send, emit
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secretkey'
 app.config['DEBUG'] = True
-socketio = SocketIO(app)
+socketio = SocketIO(app,cors_allowed_origins="*")
 
 users = {}
 
